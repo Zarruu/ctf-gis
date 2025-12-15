@@ -1,0 +1,83 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #161b22;
+    border-bottom: 2px solid #1f6feb;
+    box-shadow: 0 0 15px rgba(31, 111, 235, 0.2);
+    margin-bottom: 20px;
+}
+.logo { font-size: 1.5rem; font-weight: bold; color: #58a6ff; }
+.status { color: #3fb950; text-shadow: 0 0 5px #3fb950; }
+
+/* Map */
+.map-section {
+    background: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    margin-bottom: 20px;
+}
+#map {
+    height: 400px;
+    width: 100%;
+    background-color: #0d1117; /* Fallback */
+    border-radius: 4px;
+}
+
+/* Grid Kartu Tim */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.2s;
+}
+.team-card:hover { transform: translateY(-5px); }
+
+.team-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.team-name { font-size: 1.2rem; font-weight: bold; }
+.team-badge { background: #30363d; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
+
+.info-row { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; color: #8b949e; font-size: 0.9rem; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    text-align: center;
+    background: #0d1117;
+    padding: 10px;
+    border-radius: 6px;
+}
+.stat-val { font-size: 1.5rem; font-weight: bold; color: #58a6ff; }
+.stat-label { font-size: 0.7rem; color: #8b949e; }
+
+.status-indicator {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    background: rgba(63, 185, 80, 0.2);
+    color: #3fb950;
+    font-size: 0.8rem;
+    border: 1px solid #3fb950;
+}

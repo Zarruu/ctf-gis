@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Login - Hotspot WiFi</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <header>
+            <h1>Hotspot WiFi</h1>
+            <p>Silakan login untuk melanjutkan</p>
+        </header>
+        
+        <!-- 
+            FORM LOGIN
+            - `action` biasanya diisi oleh sistem hotspot, contoh: $(link-login-only)
+            - `method` harus POST
+        -->
+        <form name="login" action="login.php" method="post">
+            
+            <input type="hidden" name="dst" value="$(link-orig)" />
+            <input type="hidden" name="popup" value="true" />
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+            </div>
+            
+            <button type="submit">Login</button>
+        </form>
+
+        <footer>
+            <p>Dengan login, Anda menyetujui syarat dan ketentuan yang berlaku.</p>
+        </footer>
+    </div>
+
+    <script src="/script.js"></script>
+
+</body>
+</html>

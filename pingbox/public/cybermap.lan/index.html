@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Map - Live Hacking CTF</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🛡️ CYBER MAP</div>
+        <div class="status">📶 5 ACTIVE NODES</div>
+        <div class="clock" id="clock">00:00:00</div>
+    </header>
+
+    <main>
+        <section class="map-section">
+            <h2>GLOBAL NETWORK ACTIVITY MAP</h2>
+            <div id="map"></div>
+        </section>
+
+        <section class="teams-section">
+            <h2>👥 ACTIVE CYBER TEAMS</h2>
+            <div class="teams-grid" id="teams-container">
+                <div class="loading">Memuat data node...</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>

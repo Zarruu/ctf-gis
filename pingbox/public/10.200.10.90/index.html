@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Platform - Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #8a2be2, #00bfff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: #888;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .cards {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 16px;
+            padding: 40px;
+            width: 280px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #8a2be2;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
+        }
+
+        .card .icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .card span {
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🛡️ CTF Platform</h1>
+        <p>Pilih halaman yang ingin Anda akses</p>
+        <div class="cards">
+            <a href="/cybermap/" class="card">
+                <div class="icon">🗺️</div>
+                <h2>Cyber Map</h2>
+                <span>Dashboard GIS - Monitoring Tim</span>
+            </a>
+            <a href="/challenge/" class="card">
+                <div class="icon">🎯</div>
+                <h2>Challenge Arena</h2>
+                <span>Soal CTF - Submit Flag</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

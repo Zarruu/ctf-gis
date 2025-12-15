@@ -1,0 +1,439 @@
+/* ============================================
+   CTF Challenge Arena - Cyber Theme Styles
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #8a2be2, #00bfff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.team-name {
+    background: rgba(138, 43, 226, 0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    border: 1px solid rgba(138, 43, 226, 0.5);
+}
+
+.header-right {
+    display: flex;
+    gap: 16px;
+}
+
+.score-badge,
+.solved-badge {
+    background: rgba(0, 191, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    border: 1px solid rgba(0, 191, 255, 0.4);
+}
+
+/* Progress Bar */
+.progress-container {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--progress, 0%);
+    background: linear-gradient(90deg, #8a2be2, #00bfff);
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.85rem;
+    color: #aaa;
+    min-width: 100px;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 120px);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-right: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.sidebar-header h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #ccc;
+}
+
+.team-select {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(138, 43, 226, 0.4);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.team-select option {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.challenge-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.challenge-item {
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.challenge-item:hover {
+    background: rgba(138, 43, 226, 0.2);
+    border-color: rgba(138, 43, 226, 0.5);
+    transform: translateX(4px);
+}
+
+.challenge-item.active {
+    background: rgba(138, 43, 226, 0.3);
+    border-color: #8a2be2;
+}
+
+.challenge-item.solved {
+    border-color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+}
+
+.challenge-item .title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.challenge-item .category {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.challenge-item .points {
+    font-size: 0.75rem;
+    color: #00bfff;
+    margin-top: 4px;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.welcome-message {
+    text-align: center;
+    padding: 60px 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.welcome-message h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #8a2be2, #00bfff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.welcome-message p {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.instructions {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.instructions h4 {
+    margin-bottom: 12px;
+    color: #00bfff;
+}
+
+.instructions ol {
+    padding-left: 20px;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+/* Challenge Detail */
+.challenge-detail {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    padding: 24px;
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.challenge-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.challenge-meta {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.category-badge {
+    background: rgba(138, 43, 226, 0.3);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #c9a0ff;
+}
+
+.points-badge {
+    background: rgba(0, 191, 255, 0.3);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #00bfff;
+}
+
+.section-title {
+    font-size: 1rem;
+    color: #00bfff;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.description-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    border-radius: 8px;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+.code-block {
+    background: #0d0d0d;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 8px;
+    padding: 16px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
+    color: #00ff88;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+/* Hint Section */
+.hint-toggle {
+    background: rgba(255, 193, 7, 0.2);
+    border: 1px solid rgba(255, 193, 7, 0.4);
+    color: #ffc107;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.hint-toggle:hover {
+    background: rgba(255, 193, 7, 0.3);
+}
+
+.hint-content {
+    display: none;
+    margin-top: 12px;
+    padding: 16px;
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 8px;
+    color: #ffc107;
+}
+
+.hint-content.show {
+    display: block;
+}
+
+/* Submit Form */
+.submit-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.submit-form {
+    display: flex;
+    gap: 12px;
+}
+
+.flag-input {
+    flex: 1;
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(138, 43, 226, 0.4);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Consolas', monospace;
+}
+
+.flag-input:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+}
+
+.submit-btn {
+    padding: 14px 32px;
+    background: linear-gradient(90deg, #8a2be2, #6a1fd0);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #9b3cf7, #7b2fe0);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+}
+
+.submit-btn:disabled {
+    background: #444;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Result Message */
+.result-message {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: none;
+}
+
+.result-message.success {
+    display: block;
+    background: rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(0, 255, 136, 0.5);
+    color: #00ff88;
+}
+
+.result-message.error {
+    display: block;
+    background: rgba(255, 68, 68, 0.2);
+    border: 1px solid rgba(255, 68, 68, 0.5);
+    color: #ff4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .submit-form {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,84 @@
+/* --- Pengaturan Dasar --- */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Font yang umum digunakan pada situs web lama/korporat */
+    background-color: #f0f0f0; /* Latar belakang abu-abu muda */
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- Container Utama (untuk meniru tampilan portal) --- */
+.container {
+    max-width: 800px; /* Lebar yang lebih besar untuk meniru halaman portal */
+    margin: 20px auto; /* Memposisikan container di tengah */
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* --- Kotak Form Login --- */
+.login-form {
+    border: 1px solid #00529B; /* Border dengan warna biru BCA */
+    width: 100%;
+    max-width: 350px; /* Membatasi lebar maksimum form */
+}
+
+/* --- Judul Form (Header Biru) --- */
+.login-form h2 {
+    background-color: #00529B; /* Warna biru khas BCA */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 12px;
+    margin: 0; /* Menghilangkan jarak default */
+    text-align: left;
+}
+
+/* --- Area Isian Form --- */
+.login-form form {
+    padding: 15px;
+    background-color: #f8f8f8; /* Latar belakang form yang sedikit berbeda */
+}
+
+/* --- Grup Form (Label + Input) --- */
+.form-group {
+    margin-bottom: 12px; /* Jarak antar grup form */
+    text-align: left;
+}
+
+/* --- Style untuk Label --- */
+.form-group label {
+    display: block; /* Menempatkan label di baris tersendiri */
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 4px; /* Jarak antara label dan input */
+}
+
+/* --- Style untuk Input Field --- */
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #d1d1d1;
+    border-radius: 0; /* Tidak ada sudut yang membulat, tampilan kotak */
+    font-size: 13px;
+    height: 25px; /* Tinggi yang tetap untuk input */
+}
+
+/* --- Style untuk Tombol Login --- */
+button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    background-color: #0066CC; /* Warna biru yang sedikit lebih cerah untuk tombol */
+    border: 1px solid #00529B; /* Border yang lebih gelap untuk definisi */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase; /* Huruf besar, umum untuk tombol gaya ini */
+}
+
+/* Efek saat tombol di-hover (cursor di atasnya) */
+button[type="submit"]:hover {
+    background-color: #00529B; /* Warna menjadi lebih gelap saat hover */
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge Arena - Merdeka Siber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <span class="logo">🛡️ CTF Arena</span>
+            <span class="team-name" id="team-display">Select Team</span>
+        </div>
+        <div class="header-right">
+            <span class="score-badge" id="score-display">🏆 0 points</span>
+            <span class="solved-badge" id="solved-display">✅ 0/4 challenges</span>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <span class="progress-text" id="progress-text">0% completed</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>🎯 Select Team</h3>
+            </div>
+            <select id="team-select" class="team-select">
+                <option value="">-- Choose Team --</option>
+            </select>
+
+            <div class="sidebar-header" style="margin-top: 24px;">
+                <h3>📋 Challenge List</h3>
+            </div>
+            <div id="challenge-list" class="challenge-list">
+                <!-- Diisi oleh JavaScript -->
+            </div>
+        </aside>
+
+        <!-- Challenge Detail -->
+        <section class="content" id="challenge-content">
+            <div class="welcome-message">
+                <h2>👋 Welcome to CTF Challenge Arena</h2>
+                <p>Select a team and choose a challenge from the sidebar to begin.</p>
+                <div class="instructions">
+                    <h4>📖 How to Play:</h4>
+                    <ol>
+                        <li>Select your team from the dropdown</li>
+                        <li>Choose a challenge from the list</li>
+                        <li>Read the description carefully</li>
+                        <li>Find the flag and submit it</li>
+                        <li>Earn points for your team!</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
